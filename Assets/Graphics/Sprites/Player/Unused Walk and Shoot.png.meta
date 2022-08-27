@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,7 +105,532 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 47
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55765f8d36048cd40b0d838887025d7a
+      internalID: -1777278454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 47
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1700d83a520816c4aaf8a84b9600253f
+      internalID: 1715682563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 47
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac9e1b0e20486a42821947c1dddd297
+      internalID: 2027303639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 47
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1b3efa30399674c852101782747309
+      internalID: 726502077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_4
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 47
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770542ff3b54bcd47b7b6a9d58986c9b
+      internalID: 1019600294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_5
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 47
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63068cc394015254b91fa56459ba69d0
+      internalID: -1802403387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_6
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 47
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c945a9ff0349a4cbc4421a8a10b34c
+      internalID: -555337258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_7
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 47
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b9725eecdb46e41aff4dac0c243bce
+      internalID: 1463756123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_8
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 47
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4270d4813b17943a6725fd5ade0afb
+      internalID: 225085611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_9
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 47
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c4f0a3479fba046b7ba56743295080
+      internalID: 2017021785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_10
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 47
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9b3f64dc498c3458b7028058206ed5
+      internalID: 2056038107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_11
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 47
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c99ceaacf5027d42a9c1a8ffca746d6
+      internalID: 1633998343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_12
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 3
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8eb3daab11b017468085ceb007da224
+      internalID: 1455221862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_13
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 3
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627c6a6773b86fe48a4ee1db5523284e
+      internalID: 1588510108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_14
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 3
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fbb957c280e6bd4eab19ca54b8a050b
+      internalID: 1328471367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_15
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 3
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1c13acf6b118b4e97ca5c99fd8fa6d
+      internalID: 9479744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_16
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 3
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520a59d886c088146a06cd7ec9e13c3c
+      internalID: 1774204971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_17
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 3
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63887d46ad8a1b34a9ed034e6206cd01
+      internalID: -1652697072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_18
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 3
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184878dc5c001d242b17aaca2224be58
+      internalID: 62818288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_19
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 3
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e246f8ceebc4914385f9ce11a767922
+      internalID: 726492683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_20
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da699e966eeb3d944bcdb597448b2606
+      internalID: 485419055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_21
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 3
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0734ba965734a0f48955dd7d875472d5
+      internalID: 716086973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_22
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 3
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfa04b560ee0fb48aa21a99befe42cd
+      internalID: 574413864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_23
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 3
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b38f49e226075c4facdf4d5a49bb4cd
+      internalID: -1710311123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unused Walk and Shoot_24
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 3
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f6a1c7b8e4fb747b0c0d39e7f544c1
+      internalID: 850818521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -116,7 +641,32 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Unused Walk and Shoot_21: 716086973
+      Unused Walk and Shoot_15: 9479744
+      Unused Walk and Shoot_16: 1774204971
+      Unused Walk and Shoot_11: 1633998343
+      Unused Walk and Shoot_9: 2017021785
+      Unused Walk and Shoot_4: 1019600294
+      Unused Walk and Shoot_3: 726502077
+      Unused Walk and Shoot_23: -1710311123
+      Unused Walk and Shoot_22: 574413864
+      Unused Walk and Shoot_17: -1652697072
+      Unused Walk and Shoot_2: 2027303639
+      Unused Walk and Shoot_20: 485419055
+      Unused Walk and Shoot_18: 62818288
+      Unused Walk and Shoot_1: 1715682563
+      Unused Walk and Shoot_5: -1802403387
+      Unused Walk and Shoot_6: -555337258
+      Unused Walk and Shoot_7: 1463756123
+      Unused Walk and Shoot_8: 225085611
+      Unused Walk and Shoot_0: -1777278454
+      Unused Walk and Shoot_10: 2056038107
+      Unused Walk and Shoot_24: 850818521
+      Unused Walk and Shoot_14: 1328471367
+      Unused Walk and Shoot_12: 1455221862
+      Unused Walk and Shoot_13: 1588510108
+      Unused Walk and Shoot_19: 726492683
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
