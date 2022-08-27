@@ -21,8 +21,14 @@ public class InputController : MonoBehaviour {
         moveInput = context.ReadValue<Vector2>();
     }
 
+    public void Shoot(InputAction.CallbackContext context) {
+        if(context.started) {
+            PlayerBehaviour.Player._gunController.createProjectille();
+            PlayerBehaviour.Player._gunController.CallCooldownCoroutine();
+        }
+    }
+
     public void GetMousePos() {
         mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()); 
-
     }
 }
