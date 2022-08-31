@@ -7,10 +7,17 @@ public class PlayerBehaviour : MonoBehaviour
     public static PlayerBehaviour Player;
 
     [Header("Movement")]
-    public Vector2 moveInput;
-    public float movementSpeed;
+    public float moveSpeed;
+    public Vector2 vel;
 
-    [Header("Mouse")]
+    [Header("Dodge")]
+    public float dodgeCooldown;
+    public bool canDodge;
+    public float dodgeForce;
+
+    [Header("Input")]
+    public Vector2 moveInput;
+    public Vector2 lastMoveInput = new Vector2(1, 0);
     public Vector2 mousePos;
     public Vector2 lookDir;
 
@@ -38,6 +45,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void Start() {
         canShoot = true;
+        canDodge = true;
     }
 
     private void Awake() {
@@ -46,8 +54,8 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
     private void FixedUpdate() {
+        vel = rb.velocity;
         Movement();
-        
     }
 
     private void Update() {
@@ -56,7 +64,20 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
     private void Movement() {
-        rb.velocity = moveInput * movementSpeed * Time.fixedDeltaTime;
+        rb.velocity = moveInput * moveSpeed * Time.fixedDeltaTime;
+    }
+
+    public void ExecuteDodge() {
+        if(Mathf.Abs(vel.magnitude) > 0.01 && canDodge) {
+            rb.MovePosition((Vector2)transform.position + lastMoveInput * dodgeForce * Time.fixedDeltaTime);
+            StartCoroutine(HandleDodgeCooldown());
+        }
+    }
+
+    public IEnumerator HandleDodgeCooldown() {
+        canDodge = false;
+        yield return new WaitForSeconds(dodgeCooldown);
+        canDodge = true;
     }
 
 
