@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NaughtyAttributes;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerBehaviour : MonoBehaviour
     public Vector2 vel;
 
     [Header("Dodge")]
+    [Tooltip("the value will change depeding on the dodge animation time")]
     public float dodgeCooldown;
     public bool canDodge;
     public float dodgeForce;
@@ -21,20 +23,25 @@ public class PlayerBehaviour : MonoBehaviour
     public Vector2 mousePos;
     public Vector2 lookDir;
 
-    [Header("Gun")]
+    #region GUN
+    [Foldout("Gun")]
     public Transform gun;
+    [Foldout("Gun")]
     public GameObject projectillePrefab;
+    [Foldout("Gun")]
     public float projectilleSpeed;
+    [Foldout("Gun")]
     public Transform gunMuzzle;
+    [Foldout("Gun")]
     public float gunCooldown;
+    [Foldout("Gun")]
     public float gunCooldownCounter;
+    [Foldout("Gun")]
     public bool canShoot = true;
+    #endregion
 
     [Header("Ammunation")]
     public int gunAmmo = 10;
-
-    [Header("Visuals")]
-    public GameObject Graphic;
 
     [Header("Components")]
     public Rigidbody2D rb;
@@ -59,8 +66,7 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
     private void Update() {
-        HandleFacing();
-        SetAnimation();
+        SettingLookDir();
     }
 
     private void Movement() {
@@ -80,24 +86,8 @@ public class PlayerBehaviour : MonoBehaviour
         canDodge = true;
     }
 
-
-    private void HandleFacing() {
+    private void SettingLookDir() {
         lookDir = mousePos - (Vector2)transform.position;
-        if(lookDir.x > 1) {
-            Graphic.transform.localScale = new Vector3(1f, Graphic.transform.localScale.y, Graphic.transform.localScale.z);
-            //transform.rotation = Quaternion.Euler(new Vector3(0, 0, transform.eulerAngles.z));
-            
-        } else if(lookDir.x < 1) {
-            Graphic.transform.localScale = new Vector3(-1f, Graphic.transform.localScale.y, Graphic.transform.localScale.z);
-            //transform.rotation = Quaternion.Euler(new Vector3(0, 180, transform.eulerAngles.z));
-        }
-    }
-
-    private void SetAnimation() {
-        lookDir = mousePos - (Vector2)transform.position;
-        anim.SetFloat("lookDirX", lookDir.normalized.x);
-        anim.SetFloat("lookDirY", lookDir.normalized.y);
-        anim.SetFloat("speed", rb.velocity.magnitude);
     }
     
 

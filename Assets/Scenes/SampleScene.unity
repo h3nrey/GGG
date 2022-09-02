@@ -253,7 +253,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7786885, y: 1}
+    m_SensorSize: {x: 1.7780899, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1204,6 +1204,7 @@ GameObject:
   - component: {fileID: 1764165588}
   - component: {fileID: 1764165589}
   - component: {fileID: 1764165590}
+  - component: {fileID: 1764165591}
   m_Layer: 0
   m_Name: Graphics
   m_TagString: Untagged
@@ -1298,3 +1299,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1764165591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764165587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc46fe3858ff204aa04cc02affcbec1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
