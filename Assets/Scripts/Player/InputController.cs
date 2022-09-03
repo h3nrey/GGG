@@ -22,16 +22,16 @@ public class InputController : MonoBehaviour {
         set => PlayerBehaviour.Player.mousePos = value;
     }
 
-    public void Move(InputAction.CallbackContext context) {
+    public void MoveInput(InputAction.CallbackContext context) {
         moveInput = context.ReadValue<Vector2>();
 
         if (moveInput != Vector2.zero) lastInput = moveInput;
     }
 
-    public void Shoot(InputAction.CallbackContext context) {
+    public void ShootInput(InputAction.CallbackContext context) {
+
         if(context.started) {
-            PlayerBehaviour.Player._gunController.createProjectille();
-            PlayerBehaviour.Player._gunController.CallCooldownCoroutine();
+            PlayerBehaviour.Player._gunController.Shoot();
         }
     }
 
@@ -39,9 +39,25 @@ public class InputController : MonoBehaviour {
         mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()); 
     }
 
-    public void Dodge(InputAction.CallbackContext context) {
+    public void DodgeInput(InputAction.CallbackContext context) {
         if(context.started) {
             PlayerBehaviour.Player.ExecuteDodge();
+        }
+    }
+    public void WarmingUpInput(InputAction.CallbackContext context) {
+        if (context.performed) {
+            PlayerBehaviour.Player.pressingShootButton = true;
+        }
+
+        if (context.canceled) {
+            PlayerBehaviour.Player.pressingShootButton = false;
+        }
+    }
+
+    public void ScrollMouse(InputAction.CallbackContext context) {
+        if(context.performed) {
+            PlayerBehaviour.Player.mouseScroll = context.ReadValue<Vector2>();
+            PlayerBehaviour.Player._gunController.SwtichWeapon();
         }
     }
 }

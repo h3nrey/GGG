@@ -22,12 +22,14 @@ public class PlayerBehaviour : MonoBehaviour
     public Vector2 lastMoveInput = new Vector2(1, 0);
     public Vector2 mousePos;
     public Vector2 lookDir;
+    public Vector2 mouseScroll;
+    public bool pressingShootButton;
 
     #region GUN
     [Foldout("Gun")]
     public Transform gun;
     [Foldout("Gun")]
-    public GameObject projectillePrefab;
+    public GameObject[] projectillePrefabs;
     [Foldout("Gun")]
     public float projectilleSpeed;
     [Foldout("Gun")]
@@ -39,6 +41,14 @@ public class PlayerBehaviour : MonoBehaviour
     [Foldout("Gun")]
     public bool canShoot = true;
     #endregion
+
+    [Header("Heat Controll")]
+    [ProgressBar("maxGunHeat", EColor.Orange)]
+    public float currentGunHeat = 0;
+    public float maxGunHeat = 50;
+    public float heatMultiplier;
+    public float coolMultipler;
+    public float HeatPerShoot = 5;
 
     [Header("Ammunation")]
     public int gunAmmo = 10;
@@ -67,6 +77,24 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void Update() {
         SettingLookDir();
+        if(pressingShootButton) {
+            WarmingUp();
+        } else {
+            Colling();
+        }
+    }
+
+    private void WarmingUp() {
+        
+        if(currentGunHeat < maxGunHeat) {
+            currentGunHeat += Time.deltaTime * heatMultiplier;
+        }
+    }
+
+    private void Colling() {
+        if(currentGunHeat > 0) {
+            currentGunHeat -= Time.deltaTime * coolMultipler;
+        }
     }
 
     private void Movement() {

@@ -731,9 +731,9 @@ GameObject:
   - component: {fileID: 706365556}
   - component: {fileID: 706365552}
   - component: {fileID: 706365555}
+  - component: {fileID: 706365553}
   - component: {fileID: 706365551}
   - component: {fileID: 706365550}
-  - component: {fileID: 706365553}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -846,7 +846,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 706365552}
         m_TargetAssemblyTypeName: InputController, Assembly-CSharp
-        m_MethodName: Move
+        m_MethodName: MoveInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -862,7 +862,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 706365552}
         m_TargetAssemblyTypeName: InputController, Assembly-CSharp
-        m_MethodName: Shoot
+        m_MethodName: ShootInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -882,7 +882,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 706365552}
         m_TargetAssemblyTypeName: InputController, Assembly-CSharp
-        m_MethodName: Dodge
+        m_MethodName: DodgeInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -894,6 +894,42 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: cf1b32f1-d32d-4c25-9982-14ddbefcf38a
     m_ActionName: Player/dodge[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 706365552}
+        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
+        m_MethodName: WarmingUpInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ff3cb909-c8c7-47e9-8394-b1689e530d32
+    m_ActionName: Player/Heat[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 706365552}
+        m_TargetAssemblyTypeName: InputController, Assembly-CSharp
+        m_MethodName: ScrollMouse
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ab8afb03-1d28-4f7e-99f2-20a583404563
+    m_ActionName: Player/ChangeMode[/Mouse/scroll/y]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 53d74502-6428-4f62-85e0-744c4e1e1076
+    m_ActionName: Player/ScrollUp[/Mouse/scroll/up]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -920,15 +956,22 @@ MonoBehaviour:
   lastMoveInput: {x: 0, y: 1}
   mousePos: {x: 0, y: 0}
   lookDir: {x: 0, y: 0}
+  mouseScroll: {x: 0, y: 0}
+  pressingShootButton: 0
   gun: {fileID: 314386976}
-  projectillePrefab: {fileID: 6728956782202955287, guid: 17f44568832f4ba42882f6678328d43f, type: 3}
+  projectillePrefabs:
+  - {fileID: 6728956782202955287, guid: 17f44568832f4ba42882f6678328d43f, type: 3}
   projectilleSpeed: 400
   gunMuzzle: {fileID: 1592927269}
   gunCooldown: 0.4
   gunCooldownCounter: 0
   canShoot: 1
-  gunAmmo: 4
-  Graphic: {fileID: 1764165587}
+  currentGunHeat: 0
+  maxGunHeat: 50
+  heatMultiplier: 10
+  coolMultipler: 20
+  HeatPerShoot: 5
+  gunAmmo: 10
   rb: {fileID: 706365550}
   anim: {fileID: 1764165590}
   _gunController: {fileID: 706365555}
@@ -944,6 +987,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 365990e0f6e55b94f84763f8bc948e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gunModes:
+  - {fileID: 11400000, guid: 62148fd10d3c1964d9f404aab78d6dd6, type: 2}
+  - {fileID: 11400000, guid: 2b63ea148d91f3d459949f3910a8a728, type: 2}
+  currentGunMode: {fileID: 0}
+  guns: []
+  gunModeState: 1
 --- !u!114 &706365556
 MonoBehaviour:
   m_ObjectHideFlags: 0
