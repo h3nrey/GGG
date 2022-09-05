@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: stckyGun
   m_EditorClassIdentifier: 
   name: sticky glue
-  projectille: {fileID: 5667875512182583059, guid: 91dae5e6e0a908843ab6f0f7063d7cf5, type: 3}
+  gunSprite: {fileID: 375003605, guid: 11f4f676548a10a47a67b83c7f49825d, type: 3}
+  projectille: {fileID: 3333089003950890766, guid: 2fb33b29ebb270d41a2dca18e025ee6c, type: 3}
   heatPerProjectille: 15
   ammoCost: 2
   gunAmmo: 0

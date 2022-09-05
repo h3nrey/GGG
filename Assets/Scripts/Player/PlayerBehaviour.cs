@@ -10,6 +10,7 @@ public class PlayerBehaviour : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed;
     public Vector2 vel;
+    public bool canMove;
 
     [Header("Dodge")]
     [Tooltip("the value will change depeding on the dodge animation time")]
@@ -28,6 +29,8 @@ public class PlayerBehaviour : MonoBehaviour
     #region GUN
     [Foldout("Gun")]
     public Transform gun;
+    [Foldout("Gun")]
+    public SpriteRenderer gunSprite;
     [Foldout("Gun")]
     public GameObject[] projectillePrefabs;
     [Foldout("Gun")]
@@ -63,6 +66,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void Start() {
         canShoot = true;
         canDodge = true;
+        canMove = true;
     }
 
     private void Awake() {
@@ -76,6 +80,8 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
     private void Update() {
+        float currentOffset = Mathf.LerpUnclamped(0f, 4f, 1f);
+        //print(Mathf.Lerp(2f, 8f, 0.8f * Time.time));
         SettingLookDir();
         if(pressingShootButton) {
             WarmingUp();
@@ -98,7 +104,8 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
     private void Movement() {
-        rb.velocity = moveInput * moveSpeed * Time.fixedDeltaTime;
+        if(canMove) 
+            rb.velocity = moveInput * moveSpeed * Time.fixedDeltaTime;
     }
 
     public void ExecuteDodge() {
@@ -116,7 +123,13 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void SettingLookDir() {
         lookDir = mousePos - (Vector2)transform.position;
+        lookDir.Normalize();
     }
+
+    //private void FollowStickyGlue() {
+    //    canMove = false;
+    //    while(transform.position != )
+    //}
     
 
 }

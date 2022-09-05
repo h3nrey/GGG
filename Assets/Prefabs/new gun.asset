@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: new gun
   m_EditorClassIdentifier: 
   name: solid glue
+  gunSprite: {fileID: 1330770610, guid: 11f4f676548a10a47a67b83c7f49825d, type: 3}
   projectille: {fileID: 6728956782202955287, guid: 17f44568832f4ba42882f6678328d43f, type: 3}
   heatPerProjectille: 5
   ammoCost: 1

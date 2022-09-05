@@ -35,7 +35,6 @@ public class GunController : MonoBehaviour
     #endregion
 
     private void Start() {
-        //GunMode gun = new GunMode(gunMode.ToString(), projectillePrefabs[0], 10, 1, 0);
         foreach (var gunMode in gunModes) {
             guns.Add(gunMode);
         }
@@ -78,6 +77,8 @@ public class GunController : MonoBehaviour
             }
         }
         currentGunMode = guns[gunModeState];
+        //print(guns[gunModeState].gunSprite);
+        PlayerBehaviour.Player.gunSprite.sprite = guns[gunModeState].gunSprite;
     }
 
     public void CallCooldownCoroutine() {

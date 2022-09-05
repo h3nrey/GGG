@@ -253,7 +253,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7780899, y: 1}
+    m_SensorSize: {x: 1.778125, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -728,9 +728,9 @@ GameObject:
   m_Component:
   - component: {fileID: 706365549}
   - component: {fileID: 706365554}
+  - component: {fileID: 706365555}
   - component: {fileID: 706365556}
   - component: {fileID: 706365552}
-  - component: {fileID: 706365555}
   - component: {fileID: 706365553}
   - component: {fileID: 706365551}
   - component: {fileID: 706365550}
@@ -959,6 +959,7 @@ MonoBehaviour:
   mouseScroll: {x: 0, y: 0}
   pressingShootButton: 0
   gun: {fileID: 314386976}
+  gunSprite: {fileID: 299180250}
   projectillePrefabs:
   - {fileID: 6728956782202955287, guid: 17f44568832f4ba42882f6678328d43f, type: 3}
   projectilleSpeed: 400
