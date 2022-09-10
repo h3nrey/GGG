@@ -25,6 +25,12 @@ public class StickyGlueBehaviour : MonoBehaviour
         yield return new WaitForSeconds(dryTimer);
         print("dried");
         dried = true;
+        yield return new WaitForSeconds(dryTimer + 0.2f);
+        DestroyOnDry();
+    }
+
+    private void DestroyOnDry() {
+        Destroy(this.gameObject);
     }
 
     private void Update() {
@@ -35,9 +41,21 @@ public class StickyGlueBehaviour : MonoBehaviour
     private void FixedUpdate() {
         if (!dried) {
             rb.velocity = dir * lineVelocity * Time.fixedDeltaTime;
+            PlayerBehaviour.Player.canMove = false;
+            PlayerBehaviour.Player.canUseGun = false;
+            PlayerBehaviour.Player.canShoot = false;
         }
         else {
             rb.velocity = Vector2.zero;
+            PlayerBehaviour.Player.canMove = true;
+            PlayerBehaviour.Player.rb.MovePosition(Vector2.MoveTowards(PlayerBehaviour.Player.rb.position, line.GetPosition(1), PlayerBehaviour.Player.stickyGlueFollowSpeed * Time.fixedDeltaTime));
+        }
+
+        if(PlayerBehaviour.Player.rb.position == (Vector2)line.GetPosition(1)) {
+            PlayerBehaviour.Player.canUseGun = true;
+            PlayerBehaviour.Player.canShoot = true;
         }
     }
+
+
 }

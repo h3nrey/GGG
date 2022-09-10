@@ -43,6 +43,10 @@ public class PlayerBehaviour : MonoBehaviour
     public float gunCooldownCounter;
     [Foldout("Gun")]
     public bool canShoot = true;
+    [Foldout("Gun")]
+    public bool canUseGun = true;
+    [Foldout("Gun")]
+    public float stickyGlueFollowSpeed;
     #endregion
 
     [Header("Heat Controll")]
@@ -80,8 +84,6 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
     private void Update() {
-        float currentOffset = Mathf.LerpUnclamped(0f, 4f, 1f);
-        //print(Mathf.Lerp(2f, 8f, 0.8f * Time.time));
         SettingLookDir();
         if(pressingShootButton) {
             WarmingUp();

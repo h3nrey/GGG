@@ -949,6 +949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 300
   vel: {x: 0, y: 0}
+  canMove: 0
   dodgeCooldown: 0.2
   canDodge: 0
   dodgeForce: 70
@@ -967,10 +968,12 @@ MonoBehaviour:
   gunCooldown: 0.4
   gunCooldownCounter: 0
   canShoot: 1
+  canUseGun: 1
+  stickyGlueFollowSpeed: 20
   currentGunHeat: 0
   maxGunHeat: 50
   heatMultiplier: 10
-  coolMultipler: 20
+  coolMultipler: 5
   HeatPerShoot: 5
   gunAmmo: 10
   rb: {fileID: 706365550}

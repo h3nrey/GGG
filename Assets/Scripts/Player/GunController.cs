@@ -32,6 +32,8 @@ public class GunController : MonoBehaviour
     private float projectilleSpeed => PlayerBehaviour.Player.projectilleSpeed;
 
     private float gunCooldown => PlayerBehaviour.Player.gunCooldown;
+
+    private bool canUseGun => PlayerBehaviour.Player.canUseGun;
     #endregion
 
     private void Start() {
@@ -106,7 +108,9 @@ public class GunController : MonoBehaviour
             yScale = -1;
         }
 
-        gun.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-        gun.localScale = new Vector3(gun.localScale.x, yScale, gun.localScale.z);
+        if(canUseGun) {
+            gun.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            gun.localScale = new Vector3(gun.localScale.x, yScale, gun.localScale.z);
+        }
     }
 }

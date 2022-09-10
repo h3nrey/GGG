@@ -22,10 +22,10 @@ public class VisualController : MonoBehaviour
     }
 
     private void HandleFacing() {
-        if (lookDir.x > 1) {
+        if (lookDir.x > 0) {
            transform.localScale = new Vector3(1f,transform.localScale.y,transform.localScale.z);
 
-        } else if (lookDir.x < 1) {
+        } else if (lookDir.x < 0) {
            transform.localScale = new Vector3(-1f,transform.localScale.y,transform.localScale.z);
         }
     }
