@@ -975,7 +975,9 @@ MonoBehaviour:
   heatMultiplier: 10
   coolMultipler: 5
   HeatPerShoot: 5
-  gunAmmo: 10
+  hotAmmo: 0
+  coldAmmo: 10
+  hotGlueTimer: 0
   rb: {fileID: 706365550}
   anim: {fileID: 1764165590}
   _gunController: {fileID: 706365555}

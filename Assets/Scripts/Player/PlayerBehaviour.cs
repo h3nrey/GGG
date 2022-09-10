@@ -58,7 +58,9 @@ public class PlayerBehaviour : MonoBehaviour
     public float HeatPerShoot = 5;
 
     [Header("Ammunation")]
-    public int gunAmmo = 10;
+    public int hotAmmo;
+    public int coldAmmo = 10;
+    public float hotGlueTimer;
 
     [Header("Components")]
     public Rigidbody2D rb;
@@ -85,24 +87,6 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void Update() {
         SettingLookDir();
-        if(pressingShootButton) {
-            WarmingUp();
-        } else {
-            Colling();
-        }
-    }
-
-    private void WarmingUp() {
-        
-        if(currentGunHeat < maxGunHeat) {
-            currentGunHeat += Time.deltaTime * heatMultiplier;
-        }
-    }
-
-    private void Colling() {
-        if(currentGunHeat > 0) {
-            currentGunHeat -= Time.deltaTime * coolMultipler;
-        }
     }
 
     private void Movement() {
@@ -127,11 +111,6 @@ public class PlayerBehaviour : MonoBehaviour
         lookDir = mousePos - (Vector2)transform.position;
         lookDir.Normalize();
     }
-
-    //private void FollowStickyGlue() {
-    //    canMove = false;
-    //    while(transform.position != )
-    //}
     
 
 }

@@ -23,7 +23,6 @@ public class StickyGlueBehaviour : MonoBehaviour
 
     private IEnumerator Dry() {
         yield return new WaitForSeconds(dryTimer);
-        print("dried");
         dried = true;
         yield return new WaitForSeconds(dryTimer + 0.2f);
         DestroyOnDry();
@@ -51,7 +50,7 @@ public class StickyGlueBehaviour : MonoBehaviour
             PlayerBehaviour.Player.rb.MovePosition(Vector2.MoveTowards(PlayerBehaviour.Player.rb.position, line.GetPosition(1), PlayerBehaviour.Player.stickyGlueFollowSpeed * Time.fixedDeltaTime));
         }
 
-        if(PlayerBehaviour.Player.rb.position == (Vector2)line.GetPosition(1)) {
+        if(PlayerBehaviour.Player.rb.position == (Vector2) line.GetPosition(1)) {
             PlayerBehaviour.Player.canUseGun = true;
             PlayerBehaviour.Player.canShoot = true;
         }

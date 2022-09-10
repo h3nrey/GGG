@@ -14,11 +14,25 @@ public class GunController : MonoBehaviour
         get => PlayerBehaviour.Player.canShoot;
         set => PlayerBehaviour.Player.canShoot = value;
     }
-    
 
-    private int gunAmmo {
-        get => PlayerBehaviour.Player.gunAmmo;
-        set => PlayerBehaviour.Player.gunAmmo = value;
+    private float hotGlueTimer {
+        get => PlayerBehaviour.Player.hotGlueTimer;
+        set => PlayerBehaviour.Player.hotGlueTimer = value;
+    }
+
+    private int coldAmmo {
+        get => PlayerBehaviour.Player.coldAmmo;
+        set => PlayerBehaviour.Player.coldAmmo = value;
+    }
+
+    private int hotAmmo {
+        get => PlayerBehaviour.Player.hotAmmo;
+        set => PlayerBehaviour.Player.hotAmmo = value;
+    }
+
+    private float currentGunHeat {
+        get => PlayerBehaviour.Player.currentGunHeat;
+        set => PlayerBehaviour.Player.currentGunHeat = value;
     }
     #endregion
 
@@ -34,6 +48,12 @@ public class GunController : MonoBehaviour
     private float gunCooldown => PlayerBehaviour.Player.gunCooldown;
 
     private bool canUseGun => PlayerBehaviour.Player.canUseGun;
+
+    private float maxGunHeat => PlayerBehaviour.Player.maxGunHeat;
+
+    private float heatMultiplier => PlayerBehaviour.Player.heatMultiplier;
+
+    private float coolMultipler => PlayerBehaviour.Player.coolMultipler;
     #endregion
 
     private void Start() {
@@ -47,6 +67,12 @@ public class GunController : MonoBehaviour
 
     private void Update() {
         SettingFacing();
+        if (PlayerBehaviour.Player.pressingShootButton) {
+            WarmingUp();
+        }
+        else {
+            Colling();
+        }
     }
 
     public void Shoot() {
@@ -55,10 +81,28 @@ public class GunController : MonoBehaviour
     }
 
     public void createProjectille() {
-        if (canShoot && gunAmmo > 0 && PlayerBehaviour.Player.currentGunHeat >= currentGunMode.heatPerProjectille ) {
+        if (canShoot && hotAmmo - currentGunMode.ammoCost > 0) {
             GameObject projectille = Instantiate(currentGunMode.projectille, gunMuzzle.position, gun.rotation);
-            gunAmmo--;
+            hotAmmo--;
+        }
+    }
 
+    private void WarmingUp() {
+        if (currentGunHeat < maxGunHeat) {
+            currentGunHeat += Time.deltaTime * heatMultiplier;
+            hotGlueTimer += Time.deltaTime * heatMultiplier;
+        }
+
+        if (hotGlueTimer > currentGunMode.heatPerProjectille) {
+            hotAmmo++;
+            coldAmmo--;
+            hotGlueTimer = 0;
+        }
+    }
+
+    private void Colling() {
+        if (currentGunHeat > 0) {
+            currentGunHeat -= Time.deltaTime * coolMultipler;
         }
     }
 
@@ -94,7 +138,7 @@ public class GunController : MonoBehaviour
     }
 
     public void GetAmmo() {
-        gunAmmo++;
+        coldAmmo++;
     }
 
     private void SettingFacing() {
