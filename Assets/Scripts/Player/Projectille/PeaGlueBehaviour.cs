@@ -17,4 +17,15 @@ public class PeaGlueBehaviour : MonoBehaviour
     void FixedUpdate() {
         projectilleRb.velocity = projectilleDirection * projectilleSpeed * Time.fixedDeltaTime;
     }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "projectille") {
+            StartCoroutine(Destroythis());
+        }
+    }
+
+    IEnumerator Destroythis() {
+        yield return new WaitForSeconds(0.2f);
+        Destroy(this.gameObject);
+    }
 }

@@ -253,7 +253,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.778125, y: 1}
+    m_SensorSize: {x: 1.7760253, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 706365553}
   - component: {fileID: 706365551}
   - component: {fileID: 706365550}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -970,16 +970,18 @@ MonoBehaviour:
   canShoot: 1
   canUseGun: 1
   stickyGlueFollowSpeed: 20
+  projectillesHolder: {fileID: 0}
   currentGunHeat: 0
   maxGunHeat: 50
   heatMultiplier: 10
   coolMultipler: 5
   HeatPerShoot: 5
-  hotAmmo: 0
+  hotAmmo: 500
   coldAmmo: 10
   hotGlueTimer: 0
   rb: {fileID: 706365550}
   anim: {fileID: 1764165590}
+  collider: {fileID: 706365551}
   _gunController: {fileID: 706365555}
 --- !u!114 &706365555
 MonoBehaviour:
@@ -996,6 +998,7 @@ MonoBehaviour:
   gunModes:
   - {fileID: 11400000, guid: 62148fd10d3c1964d9f404aab78d6dd6, type: 2}
   - {fileID: 11400000, guid: 2b63ea148d91f3d459949f3910a8a728, type: 2}
+  - {fileID: 11400000, guid: 5aedfd09268c94444a96c7de0986366d, type: 2}
   currentGunMode: {fileID: 0}
   guns: []
   gunModeState: 1
@@ -1129,6 +1132,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cf073dc4029108428955574ae4fcd36, type: 3}
+--- !u!1 &1346181072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1346181073}
+  m_Layer: 0
+  m_Name: ProjectillesHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1346181073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346181072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.9438903, y: -0.063598245, z: -0.035129152}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1592927268
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,4 +13,14 @@ public class CollisionController : MonoBehaviour
             Destroy(obj);
         }
     }
+
+    private void FixedUpdate() {
+        for (int i = 0; i < PlayerBehaviour.Player.projectillesHolder.childCount; i++) {
+            Transform child = PlayerBehaviour.Player.projectillesHolder.GetChild(i);
+
+            if(child.gameObject.tag != "shield") {
+                Physics2D.IgnoreCollision(GetComponent<Collider2D>(), child.GetComponent<Collider2D>());
+            }
+        }
+    }
 }

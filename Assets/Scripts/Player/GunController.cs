@@ -8,6 +8,7 @@ public class GunController : MonoBehaviour
     public GunMode currentGunMode;
     public List<GunMode> guns;
     public int gunModeState = 0;
+    public bool onRange;
 
     #region read & write
     private bool canShoot {
@@ -41,9 +42,12 @@ public class GunController : MonoBehaviour
 
     private GameObject[] projectillePrefabs => PlayerBehaviour.Player.projectillePrefabs;
     private Transform gunMuzzle => PlayerBehaviour.Player.gunMuzzle;
+    private float gunRangeDistance => PlayerBehaviour.Player.gunRangeDistance;
+    private LayerMask wallLayer => PlayerBehaviour.Player.wallLayer;
     private Transform gun => PlayerBehaviour.Player.gun;
 
     private float projectilleSpeed => PlayerBehaviour.Player.projectilleSpeed;
+    private Transform projectillesHolder => PlayerBehaviour.Player.projectillesHolder;
 
     private float gunCooldown => PlayerBehaviour.Player.gunCooldown;
 
@@ -75,18 +79,47 @@ public class GunController : MonoBehaviour
         }
     }
 
-    public void Shoot() {
-        createProjectille();
-        CallCooldownCoroutine();
+    private void FixedUpdate() {
+        checkIfCanShoot();
     }
 
-    public void createProjectille() {
-        if (canShoot && hotAmmo - currentGunMode.ammoCost > 0) {
-            GameObject projectille = Instantiate(currentGunMode.projectille, gunMuzzle.position, gun.rotation);
-            hotAmmo--;
+    public void Shoot() {
+        if(canShoot && hotAmmo - currentGunMode.ammoCost > 0 && onRange) {
+            createProjectille();
+            CallCooldownCoroutine();
         }
     }
 
+    private void checkIfCanShoot() {
+       if(currentGunMode.name == "sticky") {
+            onRange = Physics2D.Raycast(gunMuzzle.position, gunMuzzle.right, gunRangeDistance, wallLayer);
+       } else {
+            onRange = true;
+        }
+    }
+
+    #region create projectille
+    public void createProjectille() {
+            GameObject projectille = Instantiate(currentGunMode.projectille, gunMuzzle.position, gun.rotation, projectillesHolder);
+            hotAmmo--;
+    }
+    #endregion
+
+    #region cooldown coroutine
+    public void CallCooldownCoroutine() {
+        StartCoroutine(HandleShootCooldown());
+    }
+
+    private IEnumerator HandleShootCooldown() {
+        canShoot = false;
+        PlayerBehaviour.Player.canMove = false;
+        yield return new WaitForSeconds(gunCooldown);
+        canShoot = true;
+        PlayerBehaviour.Player.canMove = true;
+    }
+    #endregion   
+    
+    #region warming system
     private void WarmingUp() {
         if (currentGunHeat < maxGunHeat) {
             currentGunHeat += Time.deltaTime * heatMultiplier;
@@ -105,7 +138,9 @@ public class GunController : MonoBehaviour
             currentGunHeat -= Time.deltaTime * coolMultipler;
         }
     }
+    #endregion
 
+    #region switch weapon
     public void SwtichWeapon() {
         int stateChanger = (int)PlayerBehaviour.Player.mouseScroll.y;
 
@@ -126,20 +161,13 @@ public class GunController : MonoBehaviour
         //print(guns[gunModeState].gunSprite);
         PlayerBehaviour.Player.gunSprite.sprite = guns[gunModeState].gunSprite;
     }
+    #endregion
 
-    public void CallCooldownCoroutine() {
-        StartCoroutine(HandleShootCooldown());
-    }
-
-    private IEnumerator HandleShootCooldown() {
-        canShoot = false;
-        yield return new WaitForSeconds(gunCooldown);
-        canShoot = true;
-    }
-
+    #region ammo
     public void GetAmmo() {
         coldAmmo++;
     }
+    #endregion
 
     private void SettingFacing() {
         Vector2 lookDir = mousePos - PlayerBehaviour.Player.rb.position;
@@ -156,5 +184,12 @@ public class GunController : MonoBehaviour
             gun.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
             gun.localScale = new Vector3(gun.localScale.x, yScale, gun.localScale.z);
         }
+    }
+
+    private void OnDrawGizmos() {
+        print(gunMuzzle.position);
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(gunMuzzle.position, gunMuzzle.right * gunRangeDistance);
+
     }
 }

@@ -26,6 +26,9 @@ public class PlayerBehaviour : MonoBehaviour
     public Vector2 mouseScroll;
     public bool pressingShootButton;
 
+    [Header("Layers")]
+    public LayerMask wallLayer;
+
     #region GUN
     [Foldout("Gun")]
     public Transform gun;
@@ -38,6 +41,8 @@ public class PlayerBehaviour : MonoBehaviour
     [Foldout("Gun")]
     public Transform gunMuzzle;
     [Foldout("Gun")]
+    public float gunRangeDistance;
+    [Foldout("Gun")]
     public float gunCooldown;
     [Foldout("Gun")]
     public float gunCooldownCounter;
@@ -47,6 +52,8 @@ public class PlayerBehaviour : MonoBehaviour
     public bool canUseGun = true;
     [Foldout("Gun")]
     public float stickyGlueFollowSpeed;
+    [Foldout("Gun")]
+    public Transform projectillesHolder;
     #endregion
 
     [Header("Heat Controll")]
@@ -65,6 +72,7 @@ public class PlayerBehaviour : MonoBehaviour
     [Header("Components")]
     public Rigidbody2D rb;
     public Animator anim;
+    public Collider2D collider;
 
     [Header("Other Scripts")]
     public GunController _gunController;
@@ -83,6 +91,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void FixedUpdate() {
         vel = rb.velocity;
         Movement();
+        Physics2D.IgnoreLayerCollision(6, 7);
     }
 
     private void Update() {
@@ -111,6 +120,8 @@ public class PlayerBehaviour : MonoBehaviour
         lookDir = mousePos - (Vector2)transform.position;
         lookDir.Normalize();
     }
+
+
     
 
 }

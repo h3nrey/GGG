@@ -11,13 +11,19 @@ public class StickyGlueBehaviour : MonoBehaviour
     private Vector3 dir;
     [SerializeField] float lineVelocity;
     private Rigidbody2D rb;
+    public float range;
+    public LayerMask playerLayer;
+    private bool closeToPlayer;
 
     private void Start() {
         dir = PlayerBehaviour.Player.lookDir;
         line = GetComponent<LineRenderer>();
         rb = GetComponent<Rigidbody2D>();
         line.SetPosition(0, PlayerBehaviour.Player.gunMuzzle.position);
-
+        PlayerBehaviour.Player.canMove = false;
+        PlayerBehaviour.Player.canUseGun = false;
+        PlayerBehaviour.Player.canShoot = false;
+        PlayerBehaviour.Player.rb.velocity = Vector2.zero;
         StartCoroutine(Dry());
     }
 
@@ -40,21 +46,25 @@ public class StickyGlueBehaviour : MonoBehaviour
     private void FixedUpdate() {
         if (!dried) {
             rb.velocity = dir * lineVelocity * Time.fixedDeltaTime;
-            PlayerBehaviour.Player.canMove = false;
-            PlayerBehaviour.Player.canUseGun = false;
-            PlayerBehaviour.Player.canShoot = false;
+            
         }
         else {
             rb.velocity = Vector2.zero;
-            PlayerBehaviour.Player.canMove = true;
+            PlayerBehaviour.Player.rb.velocity = Vector2.zero;
             PlayerBehaviour.Player.rb.MovePosition(Vector2.MoveTowards(PlayerBehaviour.Player.rb.position, line.GetPosition(1), PlayerBehaviour.Player.stickyGlueFollowSpeed * Time.fixedDeltaTime));
         }
 
-        if(PlayerBehaviour.Player.rb.position == (Vector2) line.GetPosition(1)) {
+        if(PlayerBehaviour.Player.rb.position == (Vector2) line.GetPosition(1) || closeToPlayer) {
+            PlayerBehaviour.Player.canMove = true;
             PlayerBehaviour.Player.canUseGun = true;
             PlayerBehaviour.Player.canShoot = true;
+            print("can use");
         }
+
+        closeToPlayer = Physics2D.OverlapCircle(transform.position, range, playerLayer);
     }
 
-
+    private void OnDrawGizmos() {
+        Gizmos.DrawWireSphere(transform.position, range);
+    }
 }
