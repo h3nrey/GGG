@@ -15,12 +15,13 @@ public class StickyGlueBehaviour : MonoBehaviour
     public LayerMask playerLayer;
     private bool closeToPlayer;
 
+    private Rigidbody2D playerRb => PlayerBehaviour.Player.rb;
+
     private void Start() {
         dir = PlayerBehaviour.Player.lookDir;
         line = GetComponent<LineRenderer>();
         rb = GetComponent<Rigidbody2D>();
         line.SetPosition(0, PlayerBehaviour.Player.gunMuzzle.position);
-        PlayerBehaviour.Player.canMove = false;
         PlayerBehaviour.Player.canUseGun = false;
         PlayerBehaviour.Player.canShoot = false;
         PlayerBehaviour.Player.rb.velocity = Vector2.zero;
@@ -39,7 +40,7 @@ public class StickyGlueBehaviour : MonoBehaviour
     }
 
     private void Update() {
-        
+        line.SetPosition(0, PlayerBehaviour.Player.gunMuzzle.position);
         line.SetPosition(1, transform.position);
     }
 
@@ -50,12 +51,10 @@ public class StickyGlueBehaviour : MonoBehaviour
         }
         else {
             rb.velocity = Vector2.zero;
-            PlayerBehaviour.Player.rb.velocity = Vector2.zero;
             PlayerBehaviour.Player.rb.MovePosition(Vector2.MoveTowards(PlayerBehaviour.Player.rb.position, line.GetPosition(1), PlayerBehaviour.Player.stickyGlueFollowSpeed * Time.fixedDeltaTime));
         }
 
         if(PlayerBehaviour.Player.rb.position == (Vector2) line.GetPosition(1) || closeToPlayer) {
-            PlayerBehaviour.Player.canMove = true;
             PlayerBehaviour.Player.canUseGun = true;
             PlayerBehaviour.Player.canShoot = true;
             print("can use");

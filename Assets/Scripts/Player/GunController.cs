@@ -112,10 +112,8 @@ public class GunController : MonoBehaviour
 
     private IEnumerator HandleShootCooldown() {
         canShoot = false;
-        PlayerBehaviour.Player.canMove = false;
         yield return new WaitForSeconds(gunCooldown);
         canShoot = true;
-        PlayerBehaviour.Player.canMove = true;
     }
     #endregion   
     
