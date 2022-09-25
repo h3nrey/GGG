@@ -18,6 +18,7 @@ public class VisualController : MonoBehaviour
     }
     private void Update() {
         HandleFacing();
+        SettingGunFacing();
         SetAnimation();
     }
 
@@ -34,5 +35,23 @@ public class VisualController : MonoBehaviour
         anim.SetFloat("lookDirX", lookDir.normalized.x);
         anim.SetFloat("lookDirY", lookDir.normalized.y);
         anim.SetFloat("speed", rb.velocity.magnitude);
+    }
+
+    private void SettingGunFacing() {
+        Vector2 lookDir = PlayerBehaviour.Player.mousePos - PlayerBehaviour.Player.rb.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+        float yScale = 0;
+
+        if (angle > -90 && angle < 90) {
+            yScale = 1;
+        }
+        else if (angle > 90 || angle < -90) {
+            yScale = -1;
+        }
+
+        if (PlayerBehaviour.Player.canUseGun) {
+            PlayerBehaviour.Player.gun.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            PlayerBehaviour.Player.gun.localScale = new Vector3(PlayerBehaviour.Player.gun.localScale.x, yScale, PlayerBehaviour.Player.gun.localScale.z);
+        }
     }
 }

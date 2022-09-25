@@ -65,9 +65,7 @@ public class PlayerBehaviour : MonoBehaviour
     public float HeatPerShoot = 5;
 
     [Header("Ammunation")]
-    public int hotAmmo;
-    public int coldAmmo = 10;
-    public float hotGlueTimer;
+    public int ammo = 10;
 
     [Header("Components")]
     public Rigidbody2D rb;

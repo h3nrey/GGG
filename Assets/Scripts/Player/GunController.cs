@@ -16,19 +16,9 @@ public class GunController : MonoBehaviour
         set => PlayerBehaviour.Player.canShoot = value;
     }
 
-    private float hotGlueTimer {
-        get => PlayerBehaviour.Player.hotGlueTimer;
-        set => PlayerBehaviour.Player.hotGlueTimer = value;
-    }
-
-    private int coldAmmo {
-        get => PlayerBehaviour.Player.coldAmmo;
-        set => PlayerBehaviour.Player.coldAmmo = value;
-    }
-
-    private int hotAmmo {
-        get => PlayerBehaviour.Player.hotAmmo;
-        set => PlayerBehaviour.Player.hotAmmo = value;
+    private int ammo {
+        get => PlayerBehaviour.Player.ammo;
+        set => PlayerBehaviour.Player.ammo = value;
     }
 
     private float currentGunHeat {
@@ -70,7 +60,6 @@ public class GunController : MonoBehaviour
     }
 
     private void Update() {
-        SettingFacing();
         if (PlayerBehaviour.Player.pressingShootButton) {
             WarmingUp();
         }
@@ -84,7 +73,7 @@ public class GunController : MonoBehaviour
     }
 
     public void Shoot() {
-        if(canShoot && hotAmmo - currentGunMode.ammoCost > 0 && onRange) {
+        if(canShoot && ammo - currentGunMode.ammoCost > 0 && onRange && currentGunHeat >= currentGunMode.heatPerProjectille) {
             createProjectille();
             CallCooldownCoroutine();
         }
@@ -101,7 +90,7 @@ public class GunController : MonoBehaviour
     #region create projectille
     public void createProjectille() {
             GameObject projectille = Instantiate(currentGunMode.projectille, gunMuzzle.position, gun.rotation, projectillesHolder);
-            hotAmmo--;
+            ammo -= currentGunMode.ammoCost;
     }
     #endregion
 
@@ -121,13 +110,6 @@ public class GunController : MonoBehaviour
     private void WarmingUp() {
         if (currentGunHeat < maxGunHeat) {
             currentGunHeat += Time.deltaTime * heatMultiplier;
-            hotGlueTimer += Time.deltaTime * heatMultiplier;
-        }
-
-        if (hotGlueTimer > currentGunMode.heatPerProjectille) {
-            hotAmmo++;
-            coldAmmo--;
-            hotGlueTimer = 0;
         }
     }
 
@@ -163,26 +145,9 @@ public class GunController : MonoBehaviour
 
     #region ammo
     public void GetAmmo() {
-        coldAmmo++;
+        ammo++;
     }
     #endregion
-
-    private void SettingFacing() {
-        Vector2 lookDir = mousePos - PlayerBehaviour.Player.rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-        float yScale = 0;
-
-        if(angle > -90 && angle < 90) {
-            yScale = 1;
-        } else if(angle > 90 || angle < -90) {
-            yScale = -1;
-        }
-
-        if(canUseGun) {
-            gun.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-            gun.localScale = new Vector3(gun.localScale.x, yScale, gun.localScale.z);
-        }
-    }
 
     private void OnDrawGizmos() {
         print(gunMuzzle.position);

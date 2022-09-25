@@ -57,7 +57,6 @@ public class StickyGlueBehaviour : MonoBehaviour
         if(PlayerBehaviour.Player.rb.position == (Vector2) line.GetPosition(1) || closeToPlayer) {
             PlayerBehaviour.Player.canUseGun = true;
             PlayerBehaviour.Player.canShoot = true;
-            print("can use");
         }
 
         closeToPlayer = Physics2D.OverlapCircle(transform.position, range, playerLayer);
