@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,7 +105,994 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Coyote_idle_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 231
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153c1921ed165a34c9db34cf6b152592
+      internalID: 101588489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote_idle_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 231
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafe26092584e3140847559701bdfe11
+      internalID: 303558089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote_idle_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 231
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8defdd98472d74ea39ec31a6ba6c65
+      internalID: 408219879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote_idle_3
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 231
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f36b4801722f4439dadf41cdecc086
+      internalID: -1827827069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote_idle_4
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 231
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16afdac9cbd9c0a44ae6681a319a6a84
+      internalID: 1655370998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote_idle_5
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 231
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769353c289a8edf488e86f35d83f12af
+      internalID: -1910749042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote_idle_6
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 231
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8033f5a5dcc1249b732b1612274550
+      internalID: -1349650416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 161
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e1ee0c9f12fe04dabe92cceaeefeda
+      internalID: 2002424914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 161
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0540b76126e6cdb47a3c922395584338
+      internalID: 1052925776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 161
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9227d8ef43ee60348890e396aa9b652f
+      internalID: -546214965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 160
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00dc067df33b5a34194ebd243d2e2b0d
+      internalID: 1464417641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 161
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee6a6ede52893e49916209d6555cbcf
+      internalID: -1141868260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 161
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ce488ef48fa104c91deb7fba7310a3
+      internalID: -2003972699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 161
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fae1ec4f5ec949478c58bc73c798971
+      internalID: -1321046886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 161
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59380b113cd1b8f48a8c955560155dfc
+      internalID: 2046211612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 161
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f79777a1591ed4d94ed121c250fd94
+      internalID: -2131310618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 161
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4712a8e85ddd9646947bbb82d6c6045
+      internalID: -713900634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 160
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b2fce6ee0c73b4d80684094d097bca
+      internalID: -887083875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 161
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d159a371423118c4d8b29d497c0f0dc7
+      internalID: -1069130909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 161
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd657a189f290e34ca6b3591ca90465a
+      internalID: 1702160794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 161
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04aee470e8e6fb4db8b3c54e8d1ad84
+      internalID: -1972677914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 91
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b991e434b12e53b49a09311a680d64ee
+      internalID: 559651391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 91
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b91d6a985db8d488a570f53c3bb708
+      internalID: -1799606272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 91
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f057330ee4c35e4bbcfb8b3301658b3
+      internalID: -461840059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 91
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9aa4e222b052a2438372928e946bc8c
+      internalID: -394366648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 91
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5435a6286d4c844a060b9f3bd3b2d0
+      internalID: 1943403060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 91
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791efb1c1fe1d5a4991d3811878905bf
+      internalID: 2007576055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 91
+        width: 37
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43639f51b3d220645b7e81e04846690f
+      internalID: -1879168918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 91
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde759595658ec54ebd28526f9dd908f
+      internalID: 985846005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 91
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3293ae413f63a4198ec05dabd50c76
+      internalID: 1544124058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 91
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8148ae03c18d2774b9d2dbe51694e463
+      internalID: -973633822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 91
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c7e0f7e150dff4aab3a0406fc69c29
+      internalID: 386754768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 91
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff1ecbbd5d63374389c841989ac8505
+      internalID: 1000832969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 91
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d360c9270b18414498f9e82b54934ea
+      internalID: -1352569204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 91
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6b4bb0583ed8349bc2f10dbc6e52a7
+      internalID: -398687760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 91
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dcdf991d8418d241b612fd523acf075
+      internalID: -1614170145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 91
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b50dc288cfcb541b91b58f78c055a1
+      internalID: 1862323582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 91
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4e5e6aac071e645ad2cf092000f95d
+      internalID: 728505110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 80
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce30875f88dd414faed5c6dc18a0e85
+      internalID: 1424556141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 88
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 819cb13e92cd5b84896b26155b2cf7e1
+      internalID: 370980148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 88
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa36e15e649d49b4181358605e56a9bb
+      internalID: -875783052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 88
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360209a0dcb097e478281d114bfdffd5
+      internalID: 1745030837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 91
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae7bb5b9c1209c40bf8d08869fd459e
+      internalID: -478298152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 91
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e91e463951a69a4ca3ddde566456297
+      internalID: 375901206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 91
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba37aeffaa8412488a619cb2726a6d5
+      internalID: 407180707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote Front Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 73
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fde619f5a6157499a4b32f77b94097
+      internalID: -1639167116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coyote_damaged
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 23
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3915f811faccc3d49a490cdb57d071a6
+      internalID: -768640664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -116,7 +1103,54 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Coyote Front Sheet_14: 2046211612
+      Coyote Front Sheet_20: -1972677914
+      Coyote Front Sheet_32: 1000832969
+      Coyote_idle_3: 1655370998
+      Coyote Front Sheet_18: -1069130909
+      Coyote Front Sheet_35: -1614170145
+      Coyote_idle_1: 408219879
+      Coyote_idle_4: 101588489
+      Coyote Front Sheet_37: 728505110
+      Coyote Front Sheet_8: 1052925776
+      Coyote Front Sheet_15: -2131310618
+      Coyote Front Sheet_12: -2003972699
+      Coyote Front Sheet_25: 1943403060
+      Coyote Front Sheet_13: -1321046886
+      Coyote Front Sheet_29: 1544124058
+      Coyote Front Sheet_44: 407180707
+      Coyote Front Sheet_10: 1464417641
+      Coyote Front Sheet_42: -478298152
+      Coyote Front Sheet_21: 559651391
+      Coyote Front Sheet_16: -713900634
+      Coyote Front Sheet_41: 1745030837
+      Coyote Front Sheet_7: 2002424914
+      Coyote_idle_6: -1349650416
+      Coyote Front Sheet_26: 2007576055
+      Coyote_idle_0: 303558089
+      Coyote_idle_5: -1910749042
+      Coyote Front Sheet_43: 375901206
+      Coyote Front Sheet_33: -1352569204
+      Coyote_damaged: -768640664
+      Coyote Front Sheet_17: -887083875
+      Coyote Front Sheet_19: 1702160794
+      Coyote Front Sheet_11: -1141868260
+      Coyote Front Sheet_31: 386754768
+      Coyote Front Sheet_27: -1879168918
+      Coyote Front Sheet_22: -1799606272
+      Coyote Front Sheet_30: -973633822
+      Coyote Front Sheet_9: -546214965
+      Coyote Front Sheet_40: -875783052
+      Coyote Front Sheet_38: 1424556141
+      Coyote Front Sheet_45: -1639167116
+      Coyote Front Sheet_24: -394366648
+      Coyote_idle_2: -1827827069
+      Coyote Front Sheet_36: 1862323582
+      Coyote Front Sheet_28: 985846005
+      Coyote Front Sheet_39: 370980148
+      Coyote Front Sheet_23: -461840059
+      Coyote Front Sheet_34: -398687760
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

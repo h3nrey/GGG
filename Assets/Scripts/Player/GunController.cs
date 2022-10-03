@@ -150,9 +150,8 @@ public class GunController : MonoBehaviour
     #endregion
 
     private void OnDrawGizmos() {
-        print(gunMuzzle.position);
         Gizmos.color = Color.green;
-        Gizmos.DrawLine(gunMuzzle.position, gunMuzzle.right * gunRangeDistance);
+        Gizmos.DrawRay(gunMuzzle.position, gunMuzzle.right * gunRangeDistance);
 
     }
 }

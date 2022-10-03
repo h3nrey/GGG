@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CollisionController : MonoBehaviour
 {
+    private LayerMask enemyLayer => PlayerBehaviour.Player.enemyLayer;
     private void OnTriggerEnter2D(Collider2D other) {
         GameObject obj = other.gameObject;
         string objTag = obj.tag;
@@ -11,6 +12,17 @@ public class CollisionController : MonoBehaviour
         if(objTag == "ammo") {
             PlayerBehaviour.Player._gunController.GetAmmo();
             Destroy(obj);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        GameObject obj = other.gameObject;
+        string objTag = obj.tag;
+        LayerMask objLayer = obj.layer;
+
+        if(enemyLayer.value == objLayer.value) {
+            int damage = obj.GetComponent<EnemyBehaviour>().damage;
+            PlayerBehaviour.Player._lifeController.TakeDamage(damage);
         }
     }
 

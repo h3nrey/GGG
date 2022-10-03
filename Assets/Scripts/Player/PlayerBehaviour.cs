@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerBehaviour : MonoBehaviour
 {
     public static PlayerBehaviour Player;
@@ -28,6 +29,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     [Header("Layers")]
     public LayerMask wallLayer;
+    public int enemyLayer;
 
     #region GUN
     [Foldout("Gun")]
@@ -74,6 +76,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     [Header("Other Scripts")]
     public GunController _gunController;
+    public LifeController _lifeController;
 
     private void Start() {
         canShoot = true;
@@ -84,6 +87,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void Awake() {
         if (Player == null)
             Player = this;
+        _lifeController = GetComponent<LifeController>();
     }
 
     private void FixedUpdate() {
