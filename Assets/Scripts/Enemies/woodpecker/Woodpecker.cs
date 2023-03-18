@@ -9,7 +9,7 @@ public class Woodpecker : Enemy
     public float speed;
 
     //states
-    public bool onLookingRoutine;
+    public bool insideLookingRange;
     public bool aimed;
 
     //Launch
@@ -22,6 +22,12 @@ public class Woodpecker : Enemy
     //looking routine
     public float lookingRange;
     public float rotateSpeed;
+
+    //normal routine 
+    public enum direction {horizontal, vertical}
+    public float walkSpeed;
+    public float walkSense;
+    public Vector2 walkDir;
 
 
 }

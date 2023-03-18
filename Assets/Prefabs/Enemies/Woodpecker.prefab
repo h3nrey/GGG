@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 9034856259007921161}
   - component: {fileID: 1800463250302220383}
   - component: {fileID: 2191752069352545493}
+  - component: {fileID: 8104076948410915090}
   - component: {fileID: 8485433692278010971}
+  - component: {fileID: 8046715891971802750}
   m_Layer: 0
   m_Name: Woodpecker
   m_TagString: Untagged
@@ -34,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3559672448841650648
 Rigidbody2D:
@@ -98,7 +100,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1653065471, guid: f1bbae6acd2af3041804f7dd1a53685a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,7 +108,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1800463250302220383
@@ -143,6 +145,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemy: {fileID: 11400000, guid: b42fb46e7d397dd43a15445028b035ed, type: 2}
   anim: {fileID: 0}
+  damage: 0
+--- !u!114 &8104076948410915090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4923816358851549542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da741633f6537b4cb39806b9511c7c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 0
+  currentLife: 0
+  OnLivesOver:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8104076948410915090}
+        m_TargetAssemblyTypeName: LifeController, Assembly-CSharp
+        m_MethodName: DestroyOnLivesOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8485433692278010971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +188,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _woodpecker: {fileID: 11400000, guid: b42fb46e7d397dd43a15445028b035ed, type: 2}
+  aimed: 0
+  onLookingRoutine: 0
+  canLaunch: 0
+--- !u!70 &8046715891971802750
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4923816358851549542}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.45, y: 0.7}
+  m_Direction: 0

@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: woodpecker
   life: 2
-  damage: 0
-  layer:
-    serializedVersion: 2
-    m_Bits: 512
+  lifeController: {fileID: 0}
+  wallLayer: 8
+  damage: 1
+  layer: 0
   animController: {fileID: 9100000, guid: ee3f9f7f0e3b7a54fa883ed28f087bf7, type: 2}
   Object: {fileID: 4923816358851549542, guid: f1a32b608a0de184fb3ac3362da381fc, type: 3}
   speed: 0
-  onLookingRoutine: 0
+  insideLookingRange: 0
   aimed: 0
   compressingCooldown: 0.5
   launchForce: 10
@@ -30,3 +30,6 @@ MonoBehaviour:
     m_Bits: 64
   lookingRange: 2.44
   rotateSpeed: 3
+  walkSpeed: 100
+  walkSense: 1
+  walkDir: {x: 0, y: 1}
